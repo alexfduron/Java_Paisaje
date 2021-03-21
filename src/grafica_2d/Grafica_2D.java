@@ -35,6 +35,11 @@ public class Grafica_2D {
         
         FigPanel1 Marco1 = new FigPanel1();
         
+        FigPanel2 Marco2 = new FigPanel2();
+        
+        FigPanel3 Marco3 = new FigPanel3();
+        
+        
         Ventana.setSize(800,500);
         
         Ventana.setLayout(null);
@@ -54,6 +59,27 @@ public class Grafica_2D {
         Marco1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED), "", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION));
         
         Marco1.setBounds(40, 20, (Marco0.getSize().width - 40 - 40 - 40 - 40) / 3, Marco0.getSize().height - 20 - 20);
+        
+        
+        
+        Marco0.add(Marco2);
+        
+        Marco0.setLayout(null);
+        
+        Marco2.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED), "", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION));
+        
+        Marco2.setBounds(40 + (Marco0.getSize().width - 40 - 40 - 40 - 40) / 3 + 40, 20, (Marco0.getSize().width - 40 - 40 - 40 - 40) / 3, Marco0.getSize().height - 20 - 20);
+        
+        
+        Marco0.add(Marco3);
+        
+        Marco0.setLayout(null);
+        
+        Marco3.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED), "", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION));
+        
+        Marco3.setBounds(40 + (Marco0.getSize().width - 40 - 40 - 40 - 40) * 2 / 3 + 40 + 40, 20, (Marco0.getSize().width - 40 - 40 - 40 - 40) / 3, Marco0.getSize().height - 20 - 20);
+        
+        
         
         Ventana.setVisible(true);
         
