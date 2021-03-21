@@ -44,7 +44,7 @@ public class FigPanel3 extends JPanel {
         
         int TamY = this.getBounds().height;
         
-        g2d.setPaint(new GradientPaint(X1, Y1 + TamY / 3, new Color(27, 35, 200), X1, Y1 + TamY, new Color(30, 110, 220),false));
+        g2d.setPaint(new GradientPaint(X1, Y1 + TamY / 3, new Color(160, 41, 142), X1, Y1 + TamY, new Color(255, 255, 255),false));
         
         g2d.fill(new Rectangle2D.Double(X1, Y1, TamX, TamY));
         
@@ -56,8 +56,8 @@ public class FigPanel3 extends JPanel {
         
         X1 = this.getBounds().width / 2;
         Y1 = 100;
-        TamX = 100;
-        TamY = 100;
+        TamX = 50;
+        TamY = 50;
         int R1 = 255;
         int R2 = 255;
         int G1 = 255;
@@ -68,26 +68,7 @@ public class FigPanel3 extends JPanel {
         Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
  
         
-        
-        
-        
-        //Dibujar media luna
-        
-        X1 = this.getBounds().width / 2 + 30;
-        Y1 = 100 - 30;
-        TamX = 100;
-        TamY = 100;
-        R1 = 27;
-        R2 = 27;
-        G1 = 35;
-        G2 = 35;
-        B1 = 200;
-        B2 = 200;
-        
-        Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
-        
-       
-        
+ 
         
         
         //Dibujar montaña izquierda
@@ -98,12 +79,12 @@ public class FigPanel3 extends JPanel {
         int Ancho = 80;
         int Alto = 0;
         int Escala = 20;
-        R1 = 125;
-        R2 = 125;
-        G1 = 175;
-        G2 = 175;
-        B1 = 220;
-        B2 = 220;
+        R1 = 96;
+        R2 = 197;
+        G1 = 50;
+        G2 = 197;
+        B1 = 129;
+        B2 = 230;
         
         Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
@@ -117,12 +98,12 @@ public class FigPanel3 extends JPanel {
         Ancho = 130;
         Alto = 0;
         Escala = 20;
-        R1 = 195;
-        R2 = 195;
-        G1 = 195;
-        G2 = 195;
-        B1 = 195;
-        B2 = 195;
+        R1 = 38;
+        R2 = 138;
+        G1 = 38;
+        G2 = 138;
+        B1 = 38;
+        B2 = 138;
         
         Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
@@ -135,12 +116,12 @@ public class FigPanel3 extends JPanel {
         TamX = this.getBounds().width + 100;
         TamY = 100;
         int Angulo = 5;
-        R1 = 30;
-        R2 = 30;
-        G1 = 60;
-        G2 = 60;
-        B1 = 30;
-        B2 = 30;
+        R1 = 9;
+        R2 = 9;
+        G1 = 19;
+        G2 = 19;
+        B1 = 12;
+        B2 = 12;
         
         Rectangulo(g2d, X1, Y1, TamX, TamY, Angulo, R1, G1, B1, R2, G2, B2);
         
@@ -151,12 +132,12 @@ public class FigPanel3 extends JPanel {
         Ancho = -4;
         Alto = 2;
         Escala = 2;
-        R1 = 15;
-        R2 = 15;
-        G1 = 35;
-        G2 = 35;
-        B1 = 15;
-        B2 = 15;
+        R1 = 10;
+        R2 = 10;
+        G1 = 21;
+        G2 = 21;
+        B1 = 12;
+        B2 = 12;
         
         Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
@@ -195,12 +176,12 @@ public class FigPanel3 extends JPanel {
         TamX = this.getBounds().width + 100;
         TamY = 100;
         Angulo = -5;
-        R1 = 36;
-        R2 = 36;
-        G1 = 86;
-        G2 = 86;
-        B1 = 36;
-        B2 = 36;
+        R1 = 20;
+        R2 = 20;
+        G1 = 49;
+        G2 = 49;
+        B1 = 23;
+        B2 = 23;
         
         Rectangulo(g2d, X1, Y1, TamX, TamY, Angulo, R1, G1, B1, R2, G2, B2);
         
@@ -211,12 +192,12 @@ public class FigPanel3 extends JPanel {
         Ancho = -8;
         Alto = 10;
         Escala = 3;
-        R1 = 25;
-        R2 = 25;
-        G1 = 65;
-        G2 = 65;
-        B1 = 25;
-        B2 = 25;
+        R1 = 46;
+        R2 = 46;
+        G1 = 108;
+        G2 = 108;
+        B1 = 24;
+        B2 = 24;
         
         Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
@@ -292,12 +273,12 @@ public class FigPanel3 extends JPanel {
         X1 = 30;
         Y1 = 10;
         Escala = 1;
-        R1 = 255;
-        R2 = 255;
-        G1 = 255;
-        G2 = 255;
-        B1 = 255;
-        B2 = 255;
+        R1 = 220;
+        R2 = 220;
+        G1 = 158;
+        G2 = 158;
+        B1 = 205;
+        B2 = 205;
         
         Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
         

@@ -44,7 +44,7 @@ public class FigPanel1 extends JPanel {
         
         int TamY = this.getBounds().height;
         
-        g2d.setPaint(new GradientPaint(X1, Y1 + TamY / 3, new Color(27, 35, 200), X1, Y1 + TamY, new Color(30, 110, 220),false));
+        g2d.setPaint(new GradientPaint(X1, Y1 + TamY / 3, new Color(27, 35, 200), X1, Y1 + TamY, new Color(255, 255, 255),false));
         
         g2d.fill(new Rectangle2D.Double(X1, Y1, TamX, TamY));
         
@@ -292,12 +292,12 @@ public class FigPanel1 extends JPanel {
         X1 = 30;
         Y1 = 10;
         Escala = 1;
-        R1 = 255;
-        R2 = 255;
-        G1 = 255;
-        G2 = 255;
-        B1 = 255;
-        B2 = 255;
+        R1 = 172;
+        R2 = 172;
+        G1 = 165;
+        G2 = 165;
+        B1 = 250;
+        B2 = 250;
         
         Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
         
