@@ -50,19 +50,6 @@ public class FigPanel1 extends JPanel {
         
         
         
-        //Dibujar estrella
-        X1 = 10;
-        Y1 = 10;
-        int Escala = 1;
-        int R1 = 255;
-        int R2 = 255;
-        int G1 = 255;
-        int G2 = 255;
-        int B1 = 255;
-        int B2 = 255;
-        
-        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
-        
         
         
         //Dibujar luna
@@ -71,12 +58,12 @@ public class FigPanel1 extends JPanel {
         Y1 = 100;
         TamX = 100;
         TamY = 100;
-        R1 = 255;
-        R2 = 255;
-        G1 = 255;
-        G2 = 255;
-        B1 = 255;
-        B2 = 255;
+        int R1 = 255;
+        int R2 = 255;
+        int G1 = 255;
+        int G2 = 255;
+        int B1 = 255;
+        int B2 = 255;
         
         Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
  
@@ -110,7 +97,7 @@ public class FigPanel1 extends JPanel {
         
         int Ancho = 80;
         int Alto = 0;
-        Escala = 20;
+        int Escala = 20;
         R1 = 125;
         R2 = 125;
         G1 = 175;
@@ -297,6 +284,46 @@ public class FigPanel1 extends JPanel {
      
         
         Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+        
+        
+        //Dibujar estrella
+        X1 = 30;
+        Y1 = 10;
+        Escala = 1;
+        R1 = 255;
+        R2 = 255;
+        G1 = 255;
+        G2 = 255;
+        B1 = 255;
+        B2 = 255;
+        
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 20;
+        Y1 = 45;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 80;
+        Y1 = 20;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 110;
+        Y1 = 60;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 140;
+        Y1 = 30;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 180;
+        Y1 = 60;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
+        X1 = 190;
+        Y1 = 20;
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
         
         
         
