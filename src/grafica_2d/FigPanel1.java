@@ -34,6 +34,9 @@ public class FigPanel1 extends JPanel {
         
         Graphics2D g2d = (Graphics2D) g;
         
+        
+        
+        
         //dibujar rectangulo fondo
         
         int X1 = 0;
@@ -49,67 +52,63 @@ public class FigPanel1 extends JPanel {
         g2d.fill(new Rectangle2D.Double(X1, Y1, TamX, TamY));
         
         
+        
+        
+        
         //Dibujar luna
         
         X1 = this.getBounds().width / 2;
-        
         Y1 = 100;
-        
         TamX = 100;
-        
         TamY = 100;
+        int R1 = 255;
+        int R2 = 255;
+        int G1 = 255;
+        int G2 = 255;
+        int B1 = 255;
+        int B2 = 255;
         
-        g2d.setPaint(new GradientPaint(X1, Y1, Color.WHITE, X1, Y1 + TamY, Color.WHITE,false));
+        Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
+ 
         
-        g2d.fill(new Ellipse2D.Double(X1 - TamX / 2, Y1 - TamY / 2, TamX, TamY));
+        
         
         
         //Dibujar media luna
         
         X1 = this.getBounds().width / 2 + 30;
-        
         Y1 = 100 - 30;
-        
         TamX = 100;
-        
         TamY = 100;
+        R1 = 27;
+        R2 = 27;
+        G1 = 35;
+        G2 = 35;
+        B1 = 200;
+        B2 = 200;
         
-        g2d.setPaint(new GradientPaint(X1, Y1, new Color(27, 35, 200), X1, Y1 + TamY, new Color(27, 35, 200),false));
+        Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
         
-        g2d.fill(new Ellipse2D.Double(X1 - TamX / 2, Y1 - TamY / 2, TamX, TamY));
+       
+        
         
         
         //Dibujar montaña izquierda
         
-        X1 = 50;
+        X1 = 60;
+        Y1 = 190;
         
-        Y1 = 200;
-        
-        int Ancho = 0;
-        
+        int Ancho = 80;
         int Alto = 0;
-        
         int Escala = 20;
+        R1 = 125;
+        R2 = 125;
+        G1 = 175;
+        G2 = 175;
+        B1 = 220;
+        B2 = 220;
         
-        double[] PtsX = {-5 * Escala + X1 - Ancho, 5 * Escala + X1 + Ancho, 0 * Escala + X1};
-        
-        double[] PtsY = {8.66 * Escala + Y1 + Alto, 8.66 * Escala + Y1 + Alto, 0 * Escala + Y1};
-        
-        GeneralPath Montaña1 = new GeneralPath();
-        
-        Montaña1.moveTo(PtsX[0], PtsY[0]);
-        
-        for(int Puntos = 1; Puntos < PtsX.length; Puntos++){
-            
-            Montaña1.lineTo(PtsX[Puntos], PtsY[Puntos]);
-            
-        }
-        
-        Montaña1.closePath();
-        
-        g2d.setPaint(new GradientPaint(X1, Y1, new Color(125, 175, 220), X1, 9 * Escala + Y1 + Alto, new Color(125, 175, 220),false));
-        
-        g2d.fill(Montaña1);
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
         
         
@@ -117,35 +116,239 @@ public class FigPanel1 extends JPanel {
         //Dibujar montaña derecha
         
         X1 = 150;
-        
-        Y1 = 220;
-        
-        Ancho = 50;
-        
+        Y1 = 200;
+        Ancho = 130;
         Alto = 0;
-        
         Escala = 20;
+        R1 = 195;
+        R2 = 195;
+        G1 = 195;
+        G2 = 195;
+        B1 = 195;
+        B2 = 195;
         
-        double[] PtsX1 = {-5 * Escala + X1 - Ancho, 5 * Escala + X1 + Ancho, 0 * Escala + X1};
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
         
-        double[] PtsY1 = {8.66 * Escala + Y1 + Alto, 8.66 * Escala + Y1 + Alto, 0 * Escala + Y1};
         
-        GeneralPath Montaña2 = new GeneralPath();
         
-        Montaña2.moveTo(PtsX1[0], PtsY1[0]);
+        //Dibujar Campo superior y pinos
+        //Campo
+        X1 = 0;
+        Y1 = 250;
+        TamX = this.getBounds().width + 100;
+        TamY = 100;
+        int Angulo = 5;
+        R1 = 30;
+        R2 = 30;
+        G1 = 60;
+        G2 = 60;
+        B1 = 30;
+        B2 = 30;
         
-        for(int Puntos = 1; Puntos < PtsX1.length; Puntos++){
+        Rectangulo(g2d, X1, Y1, TamX, TamY, Angulo, R1, G1, B1, R2, G2, B2);
+        
+
+        //pino1
+        X1 = 20;
+        Y1 = 280;
+        Ancho = -4;
+        Alto = 2;
+        Escala = 2;
+        R1 = 15;
+        R2 = 15;
+        G1 = 35;
+        G2 = 35;
+        B1 = 15;
+        B2 = 15;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        //pino2
+        X1 = 40;
+        Y1 = 250;
+        Ancho = -4;
+        Alto = 2;
+        Escala = 2;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        //pino3
+        X1 = 90;
+        Y1 = 270;
+        Ancho = -4;
+        Alto = 2;
+        Escala = 2;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        //pino4
+        X1 = 140;
+        Y1 = 270;
+        Ancho = -4;
+        Alto = 2;
+        Escala = 2;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+        //Dibujar Campo medio y pinos
+        //Campo
+        X1 = -10;
+        Y1 = 320;
+        TamX = this.getBounds().width + 100;
+        TamY = 100;
+        Angulo = -5;
+        R1 = 36;
+        R2 = 36;
+        G1 = 86;
+        G2 = 86;
+        B1 = 36;
+        B2 = 36;
+        
+        Rectangulo(g2d, X1, Y1, TamX, TamY, Angulo, R1, G1, B1, R2, G2, B2);
+        
+
+        //pino1
+        X1 = 120;
+        Y1 = 310;
+        Ancho = -8;
+        Alto = 10;
+        Escala = 3;
+        R1 = 25;
+        R2 = 25;
+        G1 = 65;
+        G2 = 65;
+        B1 = 25;
+        B2 = 25;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+         //pino2
+        X1 = 170;
+        Y1 = 310;
+        Ancho = -8;
+        Alto = 10;
+        Escala = 3;
+     
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+        //Dibujar Campo bajos y pinos
+        //Campo
+        X1 = -10;
+        Y1 = 350;
+        TamX = this.getBounds().width + 100;
+        TamY = 100;
+        Angulo = 5;
+        R1 = 55;
+        R2 = 55;
+        G1 = 130;
+        G2 = 130;
+        B1 = 55;
+        B2 = 55;
+        
+        Rectangulo(g2d, X1, Y1, TamX, TamY, Angulo, R1, G1, B1, R2, G2, B2);
+        
+
+        //pino1
+        X1 = 20;
+        Y1 = 360;
+        Ancho = -12;
+        Alto = 10;
+        Escala = 5;
+        R1 = 45;
+        R2 = 45;
+        G1 = 110;
+        G2 = 110;
+        B1 = 20;
+        B2 = 20;
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+         //pino2
+        X1 = 100;
+        Y1 = 360;
+        Ancho = -6;
+        Alto = 5;
+        Escala = 3;
+     
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        //pino3
+        X1 = 170;
+        Y1 = 400;
+        Ancho = -12;
+        Alto = 10;
+        Escala = 5;
+     
+        
+        Triangulo(g2d, X1, Y1, Ancho, Alto, Escala, R1, G1, B1, R2, G2, B2);
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    public void Triangulo(Graphics2D g2d, int X1, int Y1, int Ancho, int Alto, int Escala, int R1, int G1, int B1, int R2, int G2, int B2){
+        
+        double[] PtsX = {-5 * Escala - Ancho, 5 * Escala + Ancho, 0 * Escala};
+        
+        double[] PtsY = {8.66 * Escala + Alto, 8.66 * Escala + Alto, 0 * Escala};
+        
+        GeneralPath Figura1 = new GeneralPath();
+        
+        Figura1.moveTo(PtsX[0], PtsY[0]);
+        
+        for(int Puntos = 1; Puntos < PtsX.length; Puntos++){
             
-            Montaña2.lineTo(PtsX1[Puntos], PtsY1[Puntos]);
+            Figura1.lineTo(PtsX[Puntos], PtsY[Puntos]);
             
         }
         
-        Montaña2.closePath();
+        Figura1.closePath();
         
-        g2d.setPaint(new GradientPaint(X1, Y1, new Color(195, 195, 195), X1, 9 * Escala + Y1 + Alto, new Color(195, 195, 195),false));
+        g2d.translate(X1, Y1);
         
-        g2d.fill(Montaña2);
+        g2d.setPaint(new GradientPaint(0, 0, new Color(R1, G1, B1), 0, 9 * Escala + Alto, new Color(R1, G1, B1),false));
         
+        g2d.fill(Figura1);
+        
+        g2d.translate(-X1, -Y1);
+        
+    }
+    
+    public void Circulo(Graphics2D g2d, int X1, int Y1, int TamX, int TamY, int R1, int G1, int B1, int R2, int G2, int B2){
+        
+        g2d.translate(X1, Y1);
+        
+        g2d.setPaint(new GradientPaint(0, 0, new Color(R1, G1, B1), 0, TamY, new Color(R2, G2, B2),false));
+        
+        g2d.fill(new Ellipse2D.Double(0 - TamX / 2, 0 - TamY / 2, TamX, TamY));
+        
+        g2d.translate(-X1, -Y1);
+        
+    }
+    
+    public void Rectangulo(Graphics2D g2d, int X1, int Y1, int TamX, int TamY, int Angulo, int R1, int G1, int B1, int R2, int G2, int B2){
+        
+        g2d.translate(X1, Y1);
+        
+        g2d.rotate(Math.PI * Angulo / 180);
+        
+        g2d.setPaint(new GradientPaint(0, TamY / 3, new Color(R1, G1, B1), 0, TamY, new Color(R2, G2, B2),false));
+        
+        g2d.fill(new Rectangle2D.Double(0, 0, TamX, TamY));
+        
+        g2d.rotate(Math.PI * (0 - Angulo) / 180);
+        
+        g2d.translate(-X1, -Y1);
         
     }
     

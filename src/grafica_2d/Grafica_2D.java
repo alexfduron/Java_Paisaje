@@ -35,7 +35,7 @@ public class Grafica_2D {
         
         FigPanel1 Marco1 = new FigPanel1();
         
-        Ventana.setSize(800,400);
+        Ventana.setSize(800,500);
         
         Ventana.setLayout(null);
         
