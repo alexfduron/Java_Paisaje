@@ -41,8 +41,6 @@ public class Grafica_2D {
         
         Ventana.add(Marco0);
         
-        //Marco0.setBackground(Color.red);
-        
         Marco0.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED), "", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION));
      
         Marco0.setBounds(0, 0, Ventana.getSize().width, Ventana.getSize().height - 22);
@@ -56,12 +54,6 @@ public class Grafica_2D {
         Marco1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED), "", TitledBorder.CENTER, TitledBorder.DEFAULT_POSITION));
         
         Marco1.setBounds(40, 20, (Marco0.getSize().width - 40 - 40 - 40 - 40) / 3, Marco0.getSize().height - 20 - 20);
-        
-        //Marco1.setBackground(Color.green);
-        
-        //Ventana.revalidate();
-        
-        //Ventana.repaint();
         
         Ventana.setVisible(true);
         
