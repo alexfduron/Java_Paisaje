@@ -18,9 +18,6 @@ import java.awt.Graphics2D;
 
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
-import java.awt.geom.RoundRectangle2D;
-import java.awt.geom.Arc2D;
-import java.awt.geom.Line2D;
 import java.awt.geom.GeneralPath;
 
 import javax.swing.JPanel;
@@ -37,7 +34,7 @@ public class FigPanel1 extends JPanel {
         
         
         
-        //dibujar rectangulo fondo
+        //dibujar rectangulo (fondo del paisaje)
         
         int X1 = 0;
         
@@ -53,6 +50,19 @@ public class FigPanel1 extends JPanel {
         
         
         
+        //Dibujar estrella
+        X1 = 10;
+        Y1 = 10;
+        int Escala = 1;
+        int R1 = 255;
+        int R2 = 255;
+        int G1 = 255;
+        int G2 = 255;
+        int B1 = 255;
+        int B2 = 255;
+        
+        Estrella(g2d, X1, Y1, Escala, R1, G1, B1, R2, G2, B2);
+        
         
         
         //Dibujar luna
@@ -61,12 +71,12 @@ public class FigPanel1 extends JPanel {
         Y1 = 100;
         TamX = 100;
         TamY = 100;
-        int R1 = 255;
-        int R2 = 255;
-        int G1 = 255;
-        int G2 = 255;
-        int B1 = 255;
-        int B2 = 255;
+        R1 = 255;
+        R2 = 255;
+        G1 = 255;
+        G2 = 255;
+        B1 = 255;
+        B2 = 255;
         
         Circulo(g2d, X1, Y1, TamX, TamY, R1, G1, B1, R2, G2, B2);
  
@@ -100,7 +110,7 @@ public class FigPanel1 extends JPanel {
         
         int Ancho = 80;
         int Alto = 0;
-        int Escala = 20;
+        Escala = 20;
         R1 = 125;
         R2 = 125;
         G1 = 175;
@@ -316,7 +326,7 @@ public class FigPanel1 extends JPanel {
         
         g2d.translate(X1, Y1);
         
-        g2d.setPaint(new GradientPaint(0, 0, new Color(R1, G1, B1), 0, 9 * Escala + Alto, new Color(R1, G1, B1),false));
+        g2d.setPaint(new GradientPaint(0, 0, new Color(R1, G1, B1), 0, 9 * Escala + Alto, new Color(R2, G2, B2),false));
         
         g2d.fill(Figura1);
         
@@ -347,6 +357,34 @@ public class FigPanel1 extends JPanel {
         g2d.fill(new Rectangle2D.Double(0, 0, TamX, TamY));
         
         g2d.rotate(Math.PI * (0 - Angulo) / 180);
+        
+        g2d.translate(-X1, -Y1);
+        
+    }
+    
+    public void Estrella(Graphics2D g2d, int X1, int Y1, int Escala, int R1, int G1, int B1, int R2, int G2, int B2){
+        
+        double[] PtsX = {5.5 * Escala, 6.7 * Escala, 10.9 * Escala, 7.3 * Escala, 8.3 * Escala, 5.5 * Escala, 2.7 * Escala, 3.7 * Escala, 0.1 * Escala, 4.3 * Escala};
+        
+        double[] PtsY = {0.0 * Escala, 3.6 * Escala, 03.6 * Escala, 5.4 * Escala, 9.6 * Escala, 7.2 * Escala, 9.6 * Escala, 5.4 * Escala, 3.6 * Escala, 3.6 * Escala};
+        
+        GeneralPath Figura1 = new GeneralPath();
+        
+        Figura1.moveTo(PtsX[0], PtsY[0]);
+        
+        for(int Puntos = 1; Puntos < PtsX.length; Puntos++){
+            
+            Figura1.lineTo(PtsX[Puntos], PtsY[Puntos]);
+            
+        }
+        
+        Figura1.closePath();
+        
+        g2d.translate(X1, Y1);
+        
+        g2d.setPaint(new GradientPaint(0, 0, new Color(R1, G1, B1), 0, 10 * Escala, new Color(R2, G2, B2),false));
+        
+        g2d.fill(Figura1);
         
         g2d.translate(-X1, -Y1);
         
